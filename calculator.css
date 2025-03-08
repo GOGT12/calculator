@@ -1,0 +1,120 @@
+body{
+    padding: 3vh 16vw ;
+    border: 0;
+    margin: 0;
+    background-color: rgb(48, 48, 48);
+    box-sizing: border-box;
+}
+#container{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: calc(100vh - 6vh);
+    display: flex;
+    min-height: 500px;
+    min-width: 420px;
+
+
+}
+
+    #left-column{
+        border: 1px solid;
+        border-right: none;
+        width: 6vw;
+        background-color: rgb(12, 38, 65);
+
+    }
+
+    #right-column{
+        border: 1px solid;
+        border-left: none;
+        width: 6vw;
+        background-color: rgb(12, 38, 65);
+
+    }
+
+    #center{
+        border: 1px solid;
+        width: 88vw;
+        background-color:rgb(32, 32, 32) ;
+
+
+    }
+        #top{
+            margin: 0;
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            height: 15%;
+        }
+            #top h1{
+                color: rgb(187, 194, 9);
+                margin: 4px;
+                font-size: 40px;
+            }
+            #top h2{
+                color: rgb(162, 243, 243);
+                margin: 4px;
+            }
+
+        #screen{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            font-size: 36px;
+            height: 20%;
+            background-color: rgb(0, 7, 82);
+            padding: 0px 15px;
+
+        }
+            #screen input{
+                background-color: rgb(249, 240, 230);
+                width: 100%;
+                height: 71%;
+                font-size: 28px;
+            }
+
+        #keyboard{
+            height: 65%;
+            display: grid;
+            grid-template-rows: repeat(5,1fr);
+            grid-template-columns: repeat(5,1fr);
+        }
+            .buttons{
+                border: 1px black solid;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 32px;
+                color: rgb(19, 0, 143);
+                font-weight: 600;
+
+            }
+
+
+                button{
+                    background-color: rgb(200, 199, 199);
+                    width: 75px;
+                    height: 50px;
+                    border-radius: 15px;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+                    #ac{
+                        background-color: rgb(216, 46, 46);
+                    }
+
+                    #del{
+                        background-color: rgb(176, 106, 37);
+                    }
+
+                    #equal{
+                        background-color: rgb(210, 182, 19);
+                    }
+
+                    .operators{
+
+                        background-color: rgb(106, 171, 125);
+                    }
