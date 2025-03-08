@@ -3,8 +3,8 @@ const display = document.getElementById("display");
 
 document.querySelectorAll("button").forEach(button => {
     button.addEventListener("mousedown", event => {
-        event.preventDefault(); // Evita que los botones tomen el foco
-        display.focus(); // Vuelve a darle el foco al input
+        event.preventDefault();
+        display.focus();
     });
 });
 
@@ -22,8 +22,14 @@ function clearDisplay(){
     display.value = "";
 }
 
-function delDisplay(){
-    display.value = display.value.slice(0,-1);
+function delDisplay() {
+    const cursorPos = display.selectionStart;
+    const beforeCursor = display.value.slice(0, cursorPos);
+    const afterCursor = display.value.slice(cursorPos);
+
+    display.value = beforeCursor.slice(0, -1) + afterCursor;
+
+    display.setSelectionRange(cursorPos - 1, cursorPos - 1);
 }
 
 function equal(){
